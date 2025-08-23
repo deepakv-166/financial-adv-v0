@@ -1,0 +1,71 @@
+Project Name: Smart Financial Advisor
+
+Description:
+Build a modular, AI-powered conversational financial advisory web app that helps users manage personal finance, loans, investments, and insurance with personalized, transparent, and educational recommendations. The app uses demo data and integrates Google Gemini API as a single AI assistant to provide natural language guidance across all features.
+
+Main Features:
+
+1. Financial Advisory
+- Collect user profile during onboarding: age, city, income, expenses, dependents, financial goals, risk tolerance.
+- Provide spending analysis with savings rate %, emergency fund recommendations.
+- Offer budgeting and savings strategies for short-term and long-term goals.
+- Goal planner for big purchases like cars, houses, gadgets with target amount and timeline.
+- SIP planner with “step-up” incremental investment calculations.
+- Employee-specific retirement advice covering PF, EPF, PPF, ELSS, and NPS.
+- Additional features: cash flow forecasts, tax-saving tips, scenario analysis, and financial literacy nudges.
+
+2. Loan Advisory
+- Proxy loan eligibility using Debt-to-Income (DTI) ratios and minimum income checks.
+- EMI calculator with detailed amortization schedule and prepayment impact simulator.
+- Rank and compare loans from banks and NBFCs by total cost (interest, fees, penalties).
+- Explain student loan specifics including moratorium and grace periods.
+- Provide debt management and credit score improvement tips.
+- Additional features: credit score simulation, payoff strategies, refinancing advice, interest rate insights.
+
+3. Investment / Stock Advisory
+- Classify users into risk profiles: conservative, balanced, aggressive.
+- Deliver beginner-friendly stock and mutual fund insights based on demo data.
+- Suggest safe ETF-first investments with rationale (expense ratio, volatility).
+- SIP calculator with step-up options for growing investments.
+- Guide users on long-term vs short-term investment strategies with portfolio cards (core + satellite).
+- Additional features: diversification advice, inflation impact education, backtest examples, portfolio rebalancing reminders.
+
+4. Insurance Advisory
+- Estimate life cover needs based on income and dependents.
+- Health insurance checklist covering room rent limits, sub-limits, waiting periods, exclusions.
+- Car insurance basics including zero depreciation and roadside assistance tailored by vehicle age.
+- Match insurance policies based on premium, claim-settlement ratios, and riders with demo data.
+- Additional features: claim filing guides, premium vs coverage trade-off visuals, rider suggestions, renewal alerts.
+
+AI Assistant Role:
+- Single AI assistant powered by Google Gemini API (preferably latest Gemini Flash models).
+- Understands natural language queries across all portals with intent detection.
+- Calls backend deterministic calculators and ranking functions for EMI, SIP, DTI, insurance matching, etc.
+- Combines AI-generated language with real-time tool results to deliver transparent, personalized advice.
+- Executes all AI and tool calls from secure backend API routes to protect API keys.
+- Provides demo-only, educational guidance with clear disclaimers.
+
+Integration Details:
+- Use Google Gemini API’s function-calling feature to interact with backend calculators.
+- Backend hosts local JSON datasets for loans, insurance, investments, branches.
+- Contains pure functions performing deterministic calculations and ranking.
+- API routes mediate between the frontend, AI model, and calculation engines.
+- Frontend built with Vercel v0 scaffolding UI components: onboarding forms, planners, calculators, chat assistant, dashboards.
+- Minimal or no database; optional auth via Supabase or Firebase for login/signup and session management.
+
+Project Goals:
+- Deliver a user-friendly conversational assistant demystifying personal finance.
+- Provide holistic advice on financial planning, loans, investments, insurance via AI + deterministic tools.
+- Focus on clear explainability and educational value using demo data.
+- Showcase integration of Google Gemini AI with backend calculation engines in Next.js.
+
+Instructions for Vercel v0:
+- Generate pages and components for the four core portals, each represented by distinct cards/icons.
+- Scaffold comprehensive onboarding forms, goal planners, calculators, and product comparison tables.
+- Build a conversational chat interface connected to a secure /api/assistant backend endpoint.
+- Create API routes for Google Gemini API integration and function-calling with local calculation engines processing JSON data.
+- Include visible disclaimers and “demo data” badges throughout the UI.
+- Provide user tooling for financial scenario simulations and detailed contextual explanations alongside recommendations.
+- Scaffold a user-friendly landing page (About Us) featuring project overview and a call-to-action button directing to the features overview page with the four main portals.
+
+This prompt fully describes the project scope, feature set, AI backend integration, and user experience flow, enabling rapid frontend and backend scaffolding with Vercel v0 for the Smart Financial Advisor web app.
